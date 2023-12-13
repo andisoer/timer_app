@@ -64,7 +64,7 @@ class TimerHomePage extends StatelessWidget {
                         onPressed: () => countdownTimer.startWork(),
                         color: Colors.teal,
                         textColor: Colors.white,
-                        child: Text('Kerja'),
+                        child: const Text('Kerja'),
                       ),
                     ),
                     Padding(
@@ -73,7 +73,7 @@ class TimerHomePage extends StatelessWidget {
                         color: Colors.blueGrey,
                         textColor: Colors.white,
                         onPressed: () => countdownTimer.startBreak(true),
-                        child: Text('Short Break'),
+                        child: const Text('Short Break'),
                       ),
                     ),
                     Padding(
@@ -82,7 +82,7 @@ class TimerHomePage extends StatelessWidget {
                         color: Colors.indigo,
                         textColor: Colors.white,
                         onPressed: () => countdownTimer.startBreak(false),
-                        child: Text('Long Break'),
+                        child: const Text('Long Break'),
                       ),
                     ),
                   ],
@@ -139,6 +139,7 @@ class TimerHomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              const Text('Dibuat oleh Andi Surya NIM: 21201194'),
             ],
           ),
         );
