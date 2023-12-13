@@ -148,7 +148,7 @@ class _SettingsState extends State<Settings> {
     switch (key) {
       case WORKTIME:
         {
-          workTime = prefs.getInt(WORKTIME)!;
+          workTime = prefs.getInt(WORKTIME) ?? 30;
           workTime = workTime + value;
           if (workTime >= 1 && workTime <= 180) {
             prefs.setInt(WORKTIME, workTime);
@@ -160,7 +160,7 @@ class _SettingsState extends State<Settings> {
         break;
       case SHORTBREAK:
         {
-          shortBreak = prefs.getInt(SHORTBREAK)!;
+          shortBreak = prefs.getInt(SHORTBREAK) ?? 5;
           shortBreak = shortBreak + value;
           if (shortBreak >= 1 && shortBreak <= 20) {
             prefs.setInt(SHORTBREAK, shortBreak);
@@ -172,7 +172,7 @@ class _SettingsState extends State<Settings> {
         break;
       case LONGBREAK:
         {
-          longBreak = prefs.getInt(LONGBREAK)!;
+          longBreak = prefs.getInt(LONGBREAK) ?? 15;
           longBreak += value;
           if (longBreak >= 1 && longBreak <= 60) {
             prefs.setInt(LONGBREAK, longBreak);
